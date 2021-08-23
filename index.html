@@ -25,15 +25,39 @@
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <!-- Fontawesome -->
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <!-- Loader -->
-    <div class="loader">
+    <div class="loader hidden">
         <img src="assets/img/rocket.svg" alt="" />
+    </div>
+    <!-- Container -->
+    <div class="container">
+        <!-- Navigation -->
+        <div class="navigation-container">
+            <div class="background"></div>
+            <h1 class="app-title">🛰️&nbsp;NASA APOD Feed&nbsp;🔭</h1>
+            <!-- Results Nav -->
+            <div class="navigation-items" id="resultsNav">
+                <h3 class="clickables" onclick="updateDOM('favourites')">❤️ Favourites</h3>
+                <h3>&nbsp; &nbsp; &nbsp;• &nbsp; &nbsp; &nbsp;</h3>
+                <h3 class="clickables" onclick="getPictures()">🖱️ Load More</h3>
+            </div>
+            <div class="navigation-items hidden" id="favouritesNav">
+                <h3 class="clickables" onclick="getPictures()"> 🖱️ Load More Posts</h3>
+            </div>
+        </div>
+        <!-- Images Container-->
+        <div class="images-container"></div>
+    </div>
+    </div>
+    <!-- Save Confirmation -->
+    <div class="save-confirmed hidden">
+        <h1>ADDED!</h1>
     </div>
     <!-- Script -->
     <script src="app.js"></script>
